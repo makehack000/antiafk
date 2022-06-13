@@ -1,0 +1,154 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local made = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local on = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local name = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local close = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.Position = UDim2.new(0.431057274, 0, 0.441113502, 0)
+Frame.Size = UDim2.new(0, 369, 0, 217)
+
+UICorner.Parent = Frame
+
+made.Name = "made"
+made.Parent = Frame
+made.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+made.BackgroundTransparency = 1.000
+made.Position = UDim2.new(0.624563158, 0, 0.719957471, 0)
+made.Size = UDim2.new(0, 139, 0, 60)
+made.Font = Enum.Font.TitilliumWeb
+made.Text = "Made By Make_hack000"
+made.TextColor3 = Color3.fromRGB(255, 255, 255)
+made.TextScaled = true
+made.TextSize = 14.000
+made.TextWrapped = true
+Frame.Draggable = true
+
+close.MouseButton1Down:connect(function()
+	Frame.Visible = false
+end)
+
+UIGradient.Parent = made
+
+on.Name = "on"
+on.Parent = Frame
+on.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+on.BackgroundTransparency = 1.000
+on.Position = UDim2.new(0.227642283, 0, 0.382488489, 0)
+on.Size = UDim2.new(0, 200, 0, 50)
+on.Font = Enum.Font.SourceSans
+on.Text = "ON"
+on.TextColor3 = Color3.fromRGB(255, 239, 6)
+on.TextSize = 30.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame_2.Position = UDim2.new(0.0027027491, 0, 0, 0)
+Frame_2.Rotation = 180.000
+Frame_2.Size = UDim2.new(0, 368, 0, 56)
+
+UICorner_2.Parent = Frame_2
+UICorner_2.Archivable = false
+
+name.Name = "name"
+name.Parent = Frame
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 1.000
+name.Position = UDim2.new(0.0027027491, 0, 0, 0)
+name.Size = UDim2.new(0, 322, 0, 56)
+name.Font = Enum.Font.TitilliumWeb
+name.Text = "Anti AFK"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
+
+UIGradient_2.Parent = name
+
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.948502064, 0, 0.0276497696, 0)
+close.Size = UDim2.new(0, 11, 0, 19)
+close.Font = Enum.Font.FredokaOne
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(213, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextStrokeColor3 = Color3.fromRGB(197, 0, 0)
+close.TextWrapped = true
+local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+	bb:CaptureController()bb:ClickButton2(Vector2.new())
+	on.Text="안티킥이 성공적으로 작동 되었습니다 ㅊㅋ"wait(3)on.Text="ON"end)
+local text = name
+
+local add = 10
+wait()
+local k = 1
+while k <= 255 do
+	text.TextColor3 = Color3.new(k/255,0/255,0/255)
+	k = k + add
+	wait()
+end
+while true do
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(255/255,k/255,0/255)
+		k = k + add
+		wait()
+	end
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+		k = k + add
+		wait()
+	end
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(0/255,255/255,k/255)
+		k = k + add
+		wait()
+	end
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+		k = k + add
+		wait()
+	end
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(k/255,0/255,255/255)
+		k = k + add
+		wait()
+	end
+	k = 1
+	while k <= 255 do
+		text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+		k = k + add
+		wait()
+	end
+	while k <= 255 do
+		text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+		k = k + add
+		wait()
+	end
+end
